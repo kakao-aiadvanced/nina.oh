@@ -19,6 +19,7 @@ class GraphState(TypedDict):
         question: question
         generation: LLM generation
         documents: list of documents
+        hallucination_cnt: count of running hallucination
     """
 
     question: str

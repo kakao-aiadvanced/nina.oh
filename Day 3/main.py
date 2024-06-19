@@ -1,7 +1,7 @@
 # $ cd ./Day 3
 # $ streamlit run main.py
-from graph_builder import generate_workflow
-from ui_generator import draw_ui_with_streamlit
+from graph.graph_builder import generate_workflow
+from ui.ui_generator import draw_ui_with_streamlit
 
 workflow = generate_workflow()
 app = workflow.compile()
