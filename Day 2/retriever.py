@@ -4,4 +4,3 @@ def retrieve_query_and_get_docs(db, query):
   retriever = db.as_retriever(search_kwargs={"k": 5})  
   search_results = retriever.get_relevant_documents(query)
   return search_results
- 
