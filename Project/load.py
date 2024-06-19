@@ -9,9 +9,9 @@ def load_docs():
   loader = WebBaseLoader(web_paths=(urls[0], urls[1], urls[2]))
   docs = loader.load()
   file_paths = [
-    '/Users/ninaoh/LLM-advanced/Day 2/data/agent.txt',
-    '/Users/ninaoh/LLM-advanced/Day 2/data/prompt.txt',
-    '/Users/ninaoh/LLM-advanced/Day 2/data/attack.txt'
+    '/Users/ninaoh/LLM-advanced/Project/data/agent.txt',
+    '/Users/ninaoh/LLM-advanced/Project/data/prompt.txt',
+    '/Users/ninaoh/LLM-advanced/Project/data/attack.txt'
   ]
   for i in range(3):
     with open(file_paths[i], 'w') as file:

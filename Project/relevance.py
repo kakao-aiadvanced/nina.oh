@@ -1,6 +1,6 @@
 from langchain_core.output_parsers import JsonOutputParser
 from langchain_core.prompts import PromptTemplate
-from langchain_openai import ChatOpenAI
+from langchain_community.chat_models import ChatOllama
 
 def get_relevance_score(chunk, query):  
   # TODO: 프롬프트를 llama index 표준 형식으로 변경
@@ -26,7 +26,7 @@ def get_relevance_score(chunk, query):
   )
 
   prompt.format(document=chunk, query=query)
-  llm = ChatOpenAI(model="gpt-3.5-turbo-0125", api_key='sk-')
+  llm = ChatOllama(model='llama3', temperature=0)
   chain = prompt | llm | parser
   return chain.invoke({"document": chunk, "query": query})
 
